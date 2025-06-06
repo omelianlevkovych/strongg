@@ -23,7 +23,7 @@ The frontend is a simple React app built with Vite. Use `pnpm` as the package ma
 
 ```bash
 pnpm install
-pnpm dev
+pnpm run
 ```
 
 During development the React app contacts the Web API running on
