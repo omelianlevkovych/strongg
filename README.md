@@ -19,11 +19,14 @@ The solution file `backend/Strongg.sln` references four projects:
 
 ## Frontend
 
-The frontend is a simple React app that shows workouts in a GitHub style grid. Run the usual npm scripts to develop:
+The frontend is a simple React app built with Vite. Use `pnpm` as the package manager:
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
+
+During development the React app contacts the Web API running on
+`http://localhost:5000` to display the list of workouts.
 
 There are currently no tests or database integrations. This repository is only a starting point to be expanded later (for example with a MAUI mobile app).

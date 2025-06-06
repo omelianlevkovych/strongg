@@ -6,12 +6,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
 
 builder.Services.AddSingleton<IWorkoutRepository, InMemoryWorkoutRepository>();
 builder.Services.AddScoped<WorkoutService>();
 
 var app = builder.Build();
 
+app.UseCors();
 app.UseSwagger();
 app.UseSwaggerUI();
 
