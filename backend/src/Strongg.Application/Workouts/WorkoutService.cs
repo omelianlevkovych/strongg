@@ -15,13 +15,11 @@ public class WorkoutService
 
     public Task AddWorkoutAsync(Workout workout)
     {
-        // return _repository.AddAsync(workout);
-        return Task.CompletedTask;
+        return _repository.AddAsync(workout);
     }
 
     public async Task<IReadOnlyList<Workout>> GetWorkoutsAsync()
     {
-        return new List<Workout>();
-        // return _repository.GetAllAsync();
+        return await _repository.GetAllAsync();
     }
 }
