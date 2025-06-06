@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Strongg.Domain.Workouts;
 
 namespace Strongg.Application.Workouts;
@@ -13,11 +15,13 @@ public class WorkoutService
 
     public Task AddWorkoutAsync(Workout workout)
     {
-        return _repository.AddAsync(workout);
+        // return _repository.AddAsync(workout);
+        return Task.CompletedTask;
     }
 
-    public Task<IReadOnlyList<Workout>> GetWorkoutsAsync()
+    public async Task<IReadOnlyList<Workout>> GetWorkoutsAsync()
     {
-        return _repository.GetAllAsync();
+        return new List<Workout>();
+        // return _repository.GetAllAsync();
     }
 }

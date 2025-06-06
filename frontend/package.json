@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@9.15.4",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"No tests specified\""
@@ -14,6 +14,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.0.0",
     "typescript": "^5.2.0",
     "vite": "^5.0.0"

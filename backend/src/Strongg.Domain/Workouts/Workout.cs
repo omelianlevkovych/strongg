@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Strongg.Domain.Workouts;
 
 public class Workout

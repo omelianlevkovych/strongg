@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Strongg.Application.Workouts;
 using Strongg.Domain.Workouts;
 using Strongg.Infrastructure.Persistence;
@@ -5,7 +10,6 @@ using Strongg.Infrastructure.Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -20,8 +24,6 @@ builder.Services.AddScoped<WorkoutService>();
 var app = builder.Build();
 
 app.UseCors();
-app.UseSwagger();
-app.UseSwaggerUI();
 
 app.MapGet("/workouts", async (WorkoutService service) =>
 {
