@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 12px);
+  grid-auto-rows: 12px;
+  gap: 2px;
+  padding: 10px;
+}
+
+.cell {
+  width: 12px;
+  height: 12px;
+  background-color: #ebedf0;
+}
+
+.cell.level-1 { background-color: #c6e48b; }
+.cell.level-2 { background-color: #7bc96f; }
+.cell.level-3 { background-color: #239a3b; }
+.cell.level-4 { background-color: #196127; }
