@@ -5,13 +5,13 @@ Strongg is a minimalistic workout tracker. The backend follows a Domain Driven D
 ## Project Structure
 
 ```
-backend/     - .NET source code organized by domain, application, infrastructure and web API
+backend/     - .NET source code organized by domain, application, infrastructure and web API projects
 frontend/    - React application created with Vite
 ```
 
 ## Backend
 
-The solution file `backend/Strongg.sln` references four projects:
+The solution file `Strongg.sln` references four projects located under `backend/`:
 - **Strongg.Domain** – domain entities and repository interfaces
 - **Strongg.Application** – application services
 - **Strongg.Infrastructure** – infrastructure implementations
