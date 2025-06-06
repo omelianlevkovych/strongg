@@ -19,7 +19,8 @@ The solution file `Strongg.sln` references four projects located under `backend/
 
 ## Frontend
 
-The frontend is a simple React app built with Vite. Use `pnpm` as the package manager:
+The frontend is a simple React app built with Vite. It now shows a yearly grid similar to GitHub contributions. Days containing workouts are highlighted in green and a button allows adding new workouts via a small popup form.
+Use `pnpm` as the package manager:
 
 ```bash
 pnpm install

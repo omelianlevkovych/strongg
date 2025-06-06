@@ -1,4 +1,42 @@
-.list {
+.container {
   padding: 10px;
   font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(53, 12px);
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+
+.cell {
+  width: 12px;
+  height: 12px;
+  background: #eee;
+}
+
+.cell.active {
+  background: #2ecc40;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
