@@ -40,9 +40,8 @@ interface Exercise {
   type: string
 }
 
-const years = Array.from({ length: 7 }, (_, i) => getYear(new Date()) - i)
-
-type TypeTotals = { [key: string]: number }
+// Only last 5 years
+const years = Array.from({ length: 5 }, (_, i) => getYear(new Date()) - i)
 
 export default function Dashboard() {
   const [selectedYear, setSelectedYear] = useState(getYear(new Date()))
@@ -107,9 +106,6 @@ export default function Dashboard() {
   // PR days for grid
   const prDays = workoutsThisYear.filter(w => w.isPR).map(w => w.date)
 
-  // Only last 5 years
-  const years = Array.from({ length: 5 }, (_, i) => getYear(new Date()) - i)
-
   return (
     <div className="w-full min-h-screen">
       <div className="max-w-screen-lg mx-auto flex flex-col gap-4 px-2 sm:px-4 pt-6">
@@ -144,7 +140,7 @@ export default function Dashboard() {
               data={gridData}
               onDayClick={date => setSelectedDate(format(date, 'yyyy-MM-dd'))}
               selectedDate={new Date(selectedDate)}
-              cellSize={14}
+              cellSize={cellSize}
               showLegend={false}
               prDays={prDays}
             />
