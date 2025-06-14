@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from '@/components/ui/toaster'
 import Layout from '@/components/layout'
 import Dashboard from '@/pages/dashboard'
 import Statistics from '@/pages/statistics'
@@ -21,7 +20,6 @@ function App() {
             <Route path="/workout-creator" element={<WorkoutCreator />} />
           </Routes>
         </Layout>
-        <Toaster />
       </Router>
     </ThemeProvider>
   )
