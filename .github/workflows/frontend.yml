@@ -18,8 +18,11 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
-      - name: Install pnpm
-        run: corepack prepare pnpm@9 --activate
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+          run_install: false
       - name: Install dependencies
         run: pnpm install
       - name: Lint
